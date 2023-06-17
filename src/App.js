@@ -1,11 +1,18 @@
 import React from "react";
 import './App.scss';
+import TodoForm from "./components/TodoForm";
+import TodoList from "./components/TodoList";
+import Search from "./components/Search";
 function App() {
   return (
-    <div>
-     <center>
-      <h3>hello react kaise ho ap</h3>
-     </center>
+    <div className="container">
+    
+      <h2>Todo App with useContextHook</h2>
+      <TodoForm/>
+      <Search/>
+      <TodoList/>
+
+     
     </div>
   );
 }
