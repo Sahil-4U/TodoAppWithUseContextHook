@@ -16,6 +16,12 @@ function TodoList() {
        <TodoItem/>
        <TodoItem/>
        <TodoItem/>
+       <TodoItem/>
+       <TodoItem/>
+       <TodoItem/>
+       <TodoItem/>
+       <TodoItem/>
+       <TodoItem/>
     </div>
   )
 }
