@@ -73,5 +73,110 @@ body{
     overflow: auto;
     max-height: 15rem;
     padding: 0.5rem;
+
+    > .todo-item{
+      margin: 1rem 0rem;
+      display: flex;
+      justify-content: space-between;
+
+
+      >*{
+        margin: 0.5rem;
+      }
+
+      .checkbox{
+        display: inline-block;
+        width: 25%;
+        padding: 0.3rem 1rem;
+        border-radius: 50px;
+        background-color: #fff;
+        color: #000;
+        font-size: 1.1rem;
+        transition: all 0.3s ease-in;
+        border: none;
+        cursor: pointer;
+        filter: drop-shadow(1px 1px 5px #0e6655);
+
+        &:hover{
+        filter: drop-shadow(1px 1px 8px #0e6655);
+        }
+      }
+
+      > .todo-text{
+        display: inline-block;
+        width: 100%;
+        padding: 0.3rem 1rem;
+        border-radius: 50px;
+        border: none;
+        background-color: #fff;
+        color: #000;
+        margin-right: 0.5rem;
+        font-size: 1.1rem;
+        transition: all 0.3s ease-in-out;
+        filter: drop-shadow(1px 1px 5px #0e6655);
+
+        &:hover{
+        filter: drop-shadow(1px 1px 8px #0e6655);
+        }
+
+      }
+      .edit-item, .delete-item{
+        display: inline-block;
+        width: 25%;
+        padding: 0.3rem 1rem;
+        border-radius: 50px;
+        background-color: #f1c40f;
+        color: #000;
+        font-size: 0.8rem;
+        transition: all 0.3s ease-in-out;
+        border: none;
+        cursor: pointer;
+        filter: drop-shadow(1px 1px 5px #0e6655);
+
+        &:hover{
+        filter: drop-shadow(1px 1px 8px #0e6655);
+        }
+
+
+      }
+      .delete-item{
+        background-color:#e74c3c;
+      }
+     
+    }
   }
+  .search{
+    width: 80%;
+    padding: 0.3rem 1rem;
+    border: none;
+    border-radius: 50px;
+    margin-bottom: 0.9rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+      outline: none;
+      filter: drop-shadow(0px 0px 2px #0e6655);
+    }
+  }
+}
+
+.completed{
+text-decoration:line-through;
+color: #e74c3c;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-track{
+  background-color: #0b5345;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #73c6b6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: #b1bcba;
 }
