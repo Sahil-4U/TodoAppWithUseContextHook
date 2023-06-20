@@ -6,13 +6,13 @@ import Search from "./components/Search";
 function App() {
   return (
     <div className="container">
-    
-      <h2>Todo App with useContextHook</h2>
-      <TodoForm/>
-      <Search/>
-      <TodoList/>
 
-     
+      <h2>Todo App</h2>
+      <TodoForm />
+      <Search />
+      <TodoList />
+
+
     </div>
   );
 }
