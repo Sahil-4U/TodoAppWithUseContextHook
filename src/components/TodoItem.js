@@ -8,7 +8,15 @@ function TodoItem({ id, text, completed }) {
   const [outputValue, setOutputValue] = useState(text);
   const [editTodo, setEditTodo] = useState(false);
 
-  const taskCompletedHandler = (e) => { }
+  const taskCompletedHandler = (e) => {
+    setChecked(!checked);
+    setCurrentTodo(currentTodo.map((todo) => {
+      if (todo.id === id) {
+        todo.completed = !todo.completed;
+      }
+      return todo;
+    }));
+  }
   const editHandler = (e) => {
     setEditTodo(!editTodo);
     if (editTodo) {
