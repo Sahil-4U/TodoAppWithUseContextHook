@@ -9,9 +9,22 @@ function TodoItem({ id, text, completed }) {
   const [editTodo, setEditTodo] = useState(false);
 
   const taskCompletedHandler = (e) => { }
-  const editHandler = (e) => { };
-  const deleteHandler = (e) => { };
-  { console.log(outputValue) }
+  const editHandler = (e) => {
+    setEditTodo(!editTodo);
+    if (editTodo) {
+      setCurrentTodo(currentTodo.map((todo) => {
+        if (todo.id === id) {
+          todo.text = outputValue;
+        }
+        return todo;
+      }))
+    }
+
+  };
+  const deleteHandler = (e) => {
+    const remainingTodo = currentTodo.filter((todo) => todo.id !== id);
+    setCurrentTodo(remainingTodo);
+  };
   return (
     <div className='todo-item'>
       <input type='checkbox' className='checkbox'
