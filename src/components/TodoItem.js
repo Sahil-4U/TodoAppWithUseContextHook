@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { TodoContext } from '../context/Context'
 
-function TodoItem({ id, text, completed }) {
+function TodoItem({ id, text, completed, search }) {
   const { currentTodo, setCurrentTodo } = useContext(TodoContext);
 
   const [checked, setChecked] = useState(completed);
@@ -34,12 +34,12 @@ function TodoItem({ id, text, completed }) {
     setCurrentTodo(remainingTodo);
   };
   return (
-    <div className='todo-item'>
+    <div className={`todo-item ${search ? "hide" : "show"}`}>
       <input type='checkbox' className='checkbox'
         checked={checked}
         onChange={taskCompletedHandler}
       />
-      <input type='text' className='todo-text'
+      <input type='text' className={`todo-text ${checked ? "completed" : " "}`}
 
         value={outputValue}
         onChange={(e) => setOutputValue(e.target.value)}
